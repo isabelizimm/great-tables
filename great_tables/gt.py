@@ -355,12 +355,13 @@ class GT(
         container_width = self._options.container_width.value
         container_height = self._options.container_height.value
 
-        finalized_table = f"""<div id="{id}" style="padding-left:{container_padding_x};padding-right:{container_padding_x};padding-top:{container_padding_y};padding-bottom:{container_padding_y};overflow-x:{container_overflow_x};overflow-y:{container_overflow_y};width:{container_width};height:{container_height};">
+        finalized_table = f"""<!DOCTYPE html><html><div id="{id}" style="padding-left:{container_padding_x};padding-right:{container_padding_x};padding-top:{container_padding_y};padding-bottom:{container_padding_y};overflow-x:{container_overflow_x};overflow-y:{container_overflow_y};width:{container_width};height:{container_height};">
 <style>
 {css}
 </style>
 {html_table}
 </div>
+</html>
         """
 
         return finalized_table
